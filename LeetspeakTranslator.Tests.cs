@@ -8,46 +8,46 @@ namespace Leetspeak.Tests
   public class LeetspeakTranslatorTests
   {
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_Array()
+    public void Translate_ConvertsStringInput_String()
     {
-      char[] array = { 'h', 'l', 'l' };
+      string stringOutput = "hll";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("hll"));
+      Assert.AreEqual(stringOutput, translator.Translate("hll"));
     }
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_ArrayChangeE()
+    public void Translate_ConvertsStringInput_StringOutputChangeE()
     {
-      char[] array = { 'h', '3', 'l', 'l' };
+      string stringOutput = "h3ll";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("hell"));
+      Assert.AreEqual(stringOutput, translator.Translate("hell"));
     }
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_ArrayChangeO()
+    public void Translate_ConvertsStringInput_StringOutputChangeO()
     {
-      char[] array = { 'h', '3', 'l', 'l', '0' };
+      string stringOutput = "h3ll0";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("hello"));
+      Assert.AreEqual(stringOutput, translator.Translate("hello"));
     }
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_ArrayChangeI()
+    public void Translate_ConvertsStringInput_StringOutputChangeI()
     {
-      char[] array = { '1', ' ', 'd', '0' };
+      string stringOutput = "1 d0";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("I do"));
+      Assert.AreEqual(stringOutput, translator.Translate("I do"));
     }
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_ArrayChangeT()
+    public void Translate_ConvertsStringInput_StringOutputChangeT()
     {
-      char[] array = { 'L', '3', '7', 's', ' ', 'g', '0' };
+      string stringOutput = "L37 g0";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("Lets go"));
+      Assert.AreEqual(stringOutput, translator.Translate("Let go"));
     }
     [TestMethod]
-    public void Translate_SplitsStringIntoArray_ArrayChangeS()
+    public void Translate_ConvertsStringInput_StringOutputChangeS()
     {
-      char[] array = { 's', '0', ' ', 'l', '3', '7', 'z', ' ', 'g', '0' };
+      string stringOutput = "s0 l37z g0";
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      CollectionAssert.AreEqual(array, translator.Translate("so lets go"));
+      Assert.AreEqual(stringOutput, translator.Translate("so lets go"));
     }  
   }
 }
