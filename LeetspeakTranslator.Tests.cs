@@ -28,5 +28,12 @@ namespace Leetspeak.Tests
      LeetspeakTranslator translator = new LeetspeakTranslator();
      CollectionAssert.AreEqual(array, translator.Translate("hello"));
    }
+   [TestMethod]
+   public void Translate_SplitsStringIntoArray_ArrayChangeI()
+   {
+     char[] array = { '1', ' ', 'd', '0' };
+     LeetspeakTranslator translator = new LeetspeakTranslator();
+     CollectionAssert.AreEqual(array, translator.Translate("I do"));
+   }
   }
 }
