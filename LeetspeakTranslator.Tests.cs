@@ -10,9 +10,9 @@ namespace Leetspeak.Tests
    [TestMethod]
    public void Translate_SplitsStringIntoArray_Array()
    {
-     char[] array = { 'h', 'e', 'l', 'l', 'o' };
+     char[] array = { 'h', 'l', 'l', 'o' };
      LeetspeakTranslator translator = new LeetspeakTranslator();
-     CollectionAssert.AreEqual(array, translator.Translate("hello"));
+     CollectionAssert.AreEqual(array, translator.Translate("hllo"));
    }
    [TestMethod]
    public void Translate_SplitsStringIntoArray_ArrayChangeE()
