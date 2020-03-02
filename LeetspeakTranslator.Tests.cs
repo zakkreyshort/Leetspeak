@@ -12,7 +12,7 @@ namespace Leetspeak.Tests
    {
      char[] array = { 'h', 'e', 'l', 'l', 'o' };
      LeetspeakTranslator translator = new LeetspeakTranslator();
-     Assert.AreEqual(array, translator.Translate("hello"));
+     CollectionAssert.AreEqual(array, translator.Translate("hello"));
    }
   }
 }
